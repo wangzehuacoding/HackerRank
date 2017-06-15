@@ -17,3 +17,11 @@ public class Solution {
         System.out.println("Int: " + i);
     }
 }
+
+//************************************************
+//当scan.nextLine()方法用到了scan.nextInt()方法下面时,用scan.nextLine()方法消去读取的空白内容
+
+//************************************************
+//If you use the nextLine() method immediately following the nextInt() method, recall that nextInt() reads integer tokens; 
+//because of this, the last newline character for that line of integer input is still queued in the input buffer and the next nextLine() 
+//will be reading the remainder of the integer line (which is empty).
