@@ -1,0 +1,48 @@
+/*
+Sample Input
+
+2
+0 2 10
+5 3 5
+Sample Output
+*/
+
+2 6 14 30 62 126 254 510 1022 2046
+8 14 26 50 98
+
+import java.util.*;
+import java.io.*;
+import java.lang.Math;
+class Solution{
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        int t=in.nextInt();
+        double r = 0;
+        for(int i=0;i<t;i++){
+            int a = in.nextInt();
+            int b = in.nextInt();
+            int n = in.nextInt();
+            
+            for(int j =0; j<n; j++)
+                {
+                        double s = a;
+                
+                for(int k = 0; k<j+1; k++)
+                    {
+                    
+                    s = b * Math.pow(2,k) + s;
+                    
+                    r = s;
+                    }
+                
+                System.out.print((long)r + " ");//强制类型转换 double->long 
+                
+                }
+            
+            System.out.println(" ");
+            
+            
+        }
+       
+    }
+}
