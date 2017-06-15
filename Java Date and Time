@@ -18,3 +18,5 @@ public class Solution {
         System.out.println(str[weekday]);
     }
 }
+
+//Calendar.MONTH =0 Calendar的月份是从 0开始算的， 所以要+1.
