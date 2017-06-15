@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+public class Solution {
+//Write your code here
+//静态初始化块只在类加载时执行一次
+//flag B H 这三个参数只能在静态初始化块的外部声明,否则会引起错误
+static boolean flag = true;//static声明的变量相当于全局变量
+static int B,H;
+static {
+    Scanner scan = new Scanner(System.in);
+    B = scan.nextInt();
+    H = scan.nextInt();
+    
+    try{
+        if(B<=0 || H <=0)
+        {     flag = false;
+        throw new Exception("Breadth and height must be positive");}
+    }
+    
+    catch(Exception e){
+    System.out.println(e);
+} 
+}
+public static void main(String[] args){
+		if(flag){
+			int area=B*H;
+			System.out.print(area);
+		}
+		
+	}//end of main
+
+}//end of class
+
